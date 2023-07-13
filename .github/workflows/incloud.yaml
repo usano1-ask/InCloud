@@ -24,7 +24,7 @@ jobs:
         id: cache-go
         uses: actions/cache@v2
         with:
-          path: /
+          path: /opt/hostedtoolcache/
           key: ${{ runner.os }}-go
 
       - name: Setting up ProjectDiscovery tools
