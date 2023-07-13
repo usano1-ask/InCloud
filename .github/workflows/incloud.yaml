@@ -24,7 +24,7 @@ jobs:
         id: cache-go
         uses: actions/cache@v2
         with:
-          path: /home/runner/go
+          path: /
           key: ${{ runner.os }}-go
 
       - name: Setting up ProjectDiscovery tools
@@ -32,7 +32,6 @@ jobs:
         env:
           GO111MODULE: on
         run: |
-          go env set GO111MODULE=on
           go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
           go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
           go get -v github.com/projectdiscovery/naabu/v2/cmd/naabu
